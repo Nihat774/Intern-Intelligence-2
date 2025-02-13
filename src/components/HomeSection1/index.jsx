@@ -11,9 +11,9 @@ function HomeSection1() {
         id="home"
         className="flex md:flex-row flex-col-reverse justify-between items-center min-h-[60vh] md:min-h-[90vh]"
       >
-        <div className="flex flex-col gap-7">
+        <div className={`${isDarkMode?"text-white":"text-black"} flex flex-col gap-7`}>
           <div className="flex flex-col md:items-start items-center gap-2">
-            <p className="bg-sky-500 text-white w-fit py-1 px-3 rounded-t-2xl rounded-r-2xl font-roboto">
+            <p className="bg-sky-500 text-white  w-fit py-1 px-3 rounded-t-2xl rounded-r-2xl font-roboto">
               Hello! I am
             </p>
             <h1 className="text-4xl md:text-5xl font-extrabold font-montserratBold ">

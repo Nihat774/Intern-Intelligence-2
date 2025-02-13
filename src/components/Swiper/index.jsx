@@ -27,7 +27,7 @@ export default function Slider() {
             <div className=" ">
               <SwiperSlide className="flex justify-center items-center   text-lg font-semibold ">
                 <div className=" flex flex-col gap-3 p-1 py-5">
-                  <h1 className="text-3xl font-semibold px-2 md:px-5 ">
+                  <h1 className={`${isDarkMode?"text-white":"text-black"} text-3xl font-semibold px-2 md:px-5 `}>
                     {item.h1Text}
                   </h1>
                   <div className="flex gap-5 px-0 md:px-5">

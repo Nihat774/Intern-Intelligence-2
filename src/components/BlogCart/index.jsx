@@ -12,7 +12,7 @@ function Cart() {
     <>
       <section id="blogs" className=" flex flex-col gap-5">
         <div className="flex flex-col justify-center items-center h-[15vh] md:h-[30vh]">
-          <h1 className="text-3xl md:text-5xl  font-bold text-center font-montserrat">
+          <h1 className={`${isDarkMode?"text-white":"text-black"} text-3xl md:text-5xl  font-bold text-center font-montserrat`}>
             BLOGS
           </h1>
           <hr className= {`h-[2px] md:h-[5px] w-[30px]  ${!isDarkMode?"bg-black":"bg-white"}`} />

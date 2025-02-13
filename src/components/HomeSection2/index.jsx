@@ -10,7 +10,7 @@ function HomeSection2() {
   return (
     <>
       <section id="experience" className=" flex flex-col gap-7">
-        <div className="flex flex-col justify-end gap-1 items-center h-[20vh]">
+        <div className={`${isDarkMode?"text-white":"text-black"} flex flex-col justify-end gap-1 items-center h-[20vh]`}>
           <h1 className={`text-3xl md:text-5xl  font-bold text-center font-montserrat`}>
             EXPERIENCE
           </h1>

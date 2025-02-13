@@ -9,7 +9,7 @@ function AboutPage() {
     <>
       <section id="about">
         <div className="flex flex-col justify-center items-center h-[15vh] md:h-[30vh]">
-          <h1 className="text-3xl md:text-5xl  font-bold text-center">ABOUT</h1>
+          <h1 className={`text-3xl md:text-5xl  font-bold text-center ${isDarkMode?"text-white":"text-black"}`}>ABOUT</h1>
           <hr className={`${isDarkMode?"bg-white":"bg-black"} h-[3px] md:h-[5px] w-[30px] `} />
         </div>
 
