@@ -11,7 +11,14 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: "var(--font-roboto), sans-serif", 
+        roboto: "var(--font-roboto), sans-serif",
+        montserrat: "var(--font-montserrat), sans-serif",
+        geist: "var(--font-geist-sans), sans-serif",
+        mono: "var(--font-geist-mono), monospace",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

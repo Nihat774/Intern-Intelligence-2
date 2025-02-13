@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #eee;
   --foreground: #171717;
 }
 
@@ -17,5 +17,17 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), sans-serif;
+}
+.dark body {
+  @apply bg-zinc-900 text-white;
+}
+.montserrat {
+  font-family: var(--font-montserrat), sans-serif;
+}
+.montserratBold {
+  font-family: var(--font-montserratBold), sans-serif;
+}
+.clip-triangle {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
