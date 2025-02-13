@@ -8,9 +8,9 @@ function AboutPage() {
   return (
     <>
       <section id="about">
-        <div className="flex flex-col justify-center items-center h-[30vh]">
-          <h1 className="text-5xl  font-bold text-center">ABOUT</h1>
-          <hr className={`${isDarkMode?"bg-white":"bg-black"} h-[5px] w-[30px] `} />
+        <div className="flex flex-col justify-center items-center h-[15vh] md:h-[30vh]">
+          <h1 className="text-3xl md:text-5xl  font-bold text-center">ABOUT</h1>
+          <hr className={`${isDarkMode?"bg-white":"bg-black"} h-[3px] md:h-[5px] w-[30px] `} />
         </div>
 
         <div className="flex md:flex-row flex-col justify-center gap-5">

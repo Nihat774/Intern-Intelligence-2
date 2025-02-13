@@ -19,7 +19,7 @@ function HomeSection6() {
 
   return (
     <>
-      <section id="contact" className="bg-sky-500 flex flex-col gap-4 md:gap-9  -mx-[20px] md:-mx-[70px] pb-[10vh] mb-[11vh]">
+      <section id="contact" className="bg-sky-500 flex flex-col gap-4 md:gap-9  -mx-[20px] md:-mx-[70px] pb-[10vh]  md:mb-[11vh]">
         <div className="relative text-center  py-10 text-white font-bold text-3xl">
           <div className={`${isDarkMode?"bg-zinc-900":"bg-gray-100"} absolute top-0 left-0 w-full h-10  clip-triangle`}></div>
           <h1 className="text-2xl md:text-5xl h-[8vh] md:h-[15vh]  flex items-end justify-center font-bold text-center text-white font-montserrat">
@@ -70,7 +70,7 @@ function HomeSection6() {
               className=" h-[20vh] resize-none rounded-xl p-3 hover:bg-neutral-300 focus:outline-none focus:border-transparent focus:bg-neutral-300 focus:placeholder-font-bold focus:placeholder-white"
               placeholder="Message"
             ></textarea>
-            <button className="bg-[#0B2F9F]  duration-500 text-white py-2 w-[10vw] px-4 md:w-[6vw] rounded-lg">
+            <button className="bg-[#0B2F9F]  duration-500 text-white py-2 w-fit px-4 md:w-[6vw] rounded-lg">
               Submit
             </button>
           </form> 

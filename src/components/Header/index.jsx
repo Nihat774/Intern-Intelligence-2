@@ -50,10 +50,10 @@ function Header() {
         className={`${
           (isScrolled && !isOpen)? ` ${isDarkMode?"bg-black md:shadow-lg shadow-white":"bg-white md:shadow-xl shadow-black"} ` : ""
         } flex items-center justify-between py-4  ${
-          isOpen ? "fixed top-0 left-0  bg-neutral-600 w-[100vw]" : "sticky top-0 px-[20px]"
+          isOpen ? "fixed top-0 left-0  bg-neutral-600 w-screen" : "sticky top-0 px-[20px]"
         } z-10 transition-all duration-300  md:px-[70px] -mx-[20px] md:-mx-[70px] `}
       >
-        <a href="#" className="text-neutral-500 font-bold text-xl flex">
+        <a href="#" className={` font-bold text-xl flex ${isDarkMode?"text-white":""}`}>
           Nihat Abdullah
         </a>
         <nav className="hidden md:flex space-x-6">

@@ -21,7 +21,7 @@ function HomeSection3() {
             alt="logo"
             loading="lazy"
             onLoad={() => setLoading(false)}
-            className={`${isDarkMode?"bg-white":""} w-full h-full rounded-3xl shadow-lg hover:shadow-xl hover:shadow-neutral-700 duration-500`}
+            className={`${isDarkMode?"bg-white":""} w-full h-full rounded-xl md:rounded-3xl shadow-lg hover:shadow-xl hover:shadow-neutral-700 duration-500`}
           />
         </div>
         <div className={`${isDarkMode?"text-neutral-400":"text-neutral-600"} flex flex-col justify-between`}>

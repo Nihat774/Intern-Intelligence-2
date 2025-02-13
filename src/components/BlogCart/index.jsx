@@ -1,20 +1,21 @@
 "use client";
 import { cartLink } from "@/constants";
+import { useTheme } from "@/context/ThemeContext";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaCommentDots, FaHeart } from "react-icons/fa6";
 
 function Cart() {
   const [loading, setLoading] = useState(false);
-  
+    const { isDarkMode } = useTheme();
   return (
     <>
       <section id="blogs" className=" flex flex-col gap-5">
-        <div className="flex flex-col justify-center items-center h-[30vh]">
-          <h1 className="text-5xl  font-bold text-center font-montserrat">
+        <div className="flex flex-col justify-center items-center h-[15vh] md:h-[30vh]">
+          <h1 className="text-3xl md:text-5xl  font-bold text-center font-montserrat">
             BLOGS
           </h1>
-          <hr className="h-[5px] w-[30px] bg-black" />
+          <hr className= {`h-[2px] md:h-[5px] w-[30px]  ${!isDarkMode?"bg-black":"bg-white"}`} />
         </div>
         <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
           {cartLink.map((item) => {
@@ -40,7 +41,7 @@ function Cart() {
                   </figure>
 
                   <div className="flex flex-col gap-3 p-4 h-[30vh]">
-                    <h2 className="card-title">{item.h1Text}</h2>
+                    <h2 className="card-title text-neutral-600">{item.h1Text}</h2>
                     <p className="text-neutral-500 font-semibold">
                       {item.date}
                     </p>

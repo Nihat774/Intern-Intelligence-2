@@ -10,14 +10,14 @@ function HomeSection2() {
   return (
     <>
       <section id="experience" className=" flex flex-col gap-7">
-        <div className="flex flex-col gap-1 items-center h-[20vh]">
+        <div className="flex flex-col justify-end gap-1 items-center h-[20vh]">
           <h1 className={`text-3xl md:text-5xl  font-bold text-center font-montserrat`}>
             EXPERIENCE
           </h1>
           <hr className={`${!isDarkMode?"bg-black":"bg-white"} h-[3px] w-[30px] md:w-[50px] `} />
         </div>
 
-        <div className="flex md:flex-row flex-col md:gap-7">
+        <div className="flex md:flex-row flex-col gap-3 md:gap-7">
           <div className="md:w-[25vw] w-[60vw] h-[20vh] md:h-[33vh]  ">
             {loading && (
               <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
@@ -27,7 +27,7 @@ function HomeSection2() {
             <img
               src="/projectLogo/console.jpg"
               alt="Console Game"
-              className={`${isDarkMode?"bg-white":"bg-black"} w-full h-full rounded-xl md:rounded-3xl shadow-neutral-400 shadow-md hover:shadow-lg hover:shadow-neutral-400 duration-500`}
+              className={`${isDarkMode?"bg-white":""} w-full h-full rounded-xl md:rounded-3xl shadow-neutral-400 shadow-md hover:shadow-lg hover:shadow-neutral-400 duration-500`}
               onLoad={() => setLoading(false)}
             />
           </div>
@@ -99,7 +99,7 @@ function HomeSection2() {
                 alt="bda logo"
                 loading="lazy"
                 onLoad={()=>setLoading(false)}
-                className={`${isDarkMode?"bg-white":"bg-black"} md:w-[25vw] w-[55vw] h-[20vh] md:h-[33vh] rounded-xl md:rounded-3xl shadow-neutral-400 shadow-md hover:shadow-lg hover:shadow-neutral-400   duration-500`}
+                className={`${isDarkMode?"bg-white":""} md:w-[25vw] w-[55vw] h-[20vh] md:h-[33vh] rounded-xl md:rounded-3xl shadow-neutral-400 shadow-md hover:shadow-lg hover:shadow-neutral-400   duration-500`}
               />
             </div>
           </div>
