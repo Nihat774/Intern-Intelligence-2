@@ -1,15 +1,38 @@
 "use client"
 import { useTheme } from "@/context/ThemeContext";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLink } from "react-icons/fa6";
 
 function HomeSection3() {
+    const sectionRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        },
+        { threshold: 0.3 }
+      );
+  
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+  
+      return () => {
+        if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
+        }
+      };
+    }, []);
      const { isDarkMode } = useTheme();
   const [loading, setLoading] = useState(false);
   return (
-    <section className="py-7 flex flex-col gap-3 md:gap-7">
-      <div className="flex md:flex-row flex-col gap-7">
+    <section ref={sectionRef} className="py-7 flex flex-col gap-3 md:gap-7">
+      <div className={`${isVisible ? "animate-fadeInRight" : "opacity-0"} flex md:flex-row flex-col gap-7`}>
         <div className="md:w-[25vw] w-[55vw] h-[20vh] md:h-[33vh] rounded-xl md:rounded-3xl">
           {loading && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
@@ -51,9 +74,9 @@ function HomeSection3() {
       </div>
 
       {/* blog-4 */}
-      <div className="flex min-h-[46vh] items-center justify-end mt-5">
-        <div className="flex md:flex-row flex-col-reverse gap-3 md:gap-7">
-          <div className={`flex flex-col gap-7 items-end justify-between ${isDarkMode?"text-neutral-400":"text-neutral-600"}`}>
+      <div ref={sectionRef} className="flex min-h-[46vh] items-center justify-end mt-5">
+        <div className={`${isVisible ? "animate-fadeInRight" : "opacity-0"} flex md:flex-row flex-col-reverse gap-3 md:gap-7`}>
+          <div className={`flex flex-col gap-7 items-end justify-between  ${isDarkMode?"text-neutral-400":"text-neutral-600"}`}>
             <div className="flex flex-col items-end">
               <h2 className="font-semibold text-xl">Personal Portfolio</h2>
               <h3 className=" font-semibold">Freelance</h3>

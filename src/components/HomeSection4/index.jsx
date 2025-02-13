@@ -1,15 +1,38 @@
 "use client"
 import { useTheme } from "@/context/ThemeContext";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLink } from "react-icons/fa6";
 import { GrServices } from "react-icons/gr";
 
 function HomeSection4() {
        const { isDarkMode } = useTheme();
+       const sectionRef = useRef(null);
+           const [isVisible, setIsVisible] = useState(false);
+         
+           useEffect(() => {
+             const observer = new IntersectionObserver(
+               ([entry]) => {
+                 if (entry.isIntersecting) {
+                   setIsVisible(true);
+                 }
+               },
+               { threshold: 0.3 }
+             );
+         
+             if (sectionRef.current) {
+               observer.observe(sectionRef.current);
+             }
+         
+             return () => {
+               if (sectionRef.current) {
+                 observer.unobserve(sectionRef.current);
+               }
+             };
+           }, []);
   return (
-    <section className="py-7">
-      <div className="flex md:flex-row flex-col gap-3 md:gap-7">
+    <section ref={sectionRef} className="py-7">
+      <div className={`${isVisible ? "animate-fadeInRight" : "opacity-0"} flex md:flex-row flex-col gap-3 md:gap-7`}>
         {/* image */}
         <div className="md:w-[25vw] w-[55vw] h-[20vh] md:h-[33vh] rounded-xl md:rounded-3xl bg-neutral-100 flex justify-center items-center shadow-lg  hover:shadow-xl hover:shadow-neutral-700  duration-500">
           <GrServices className={`text-2xl w-[23vw] h-[15vh] hover:scale-125 duration-500 ${!isDarkMode?"text-neutral-700":"text-black"}`} />
