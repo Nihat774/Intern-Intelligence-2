@@ -37,13 +37,13 @@ function HomeSection6() {
         </div>
 
         <div className="flex justify-center ">
-           <form className="flex flex-col gap-3 w-[65vw]">
+           <form className="flex flex-col gap-3 w-[65vw] ">
             <legend className="text-white text-center">Send me message</legend>
             <input
               onChange={(e) => handleChange(e)}
               name="fullName"
               value={userData.fullName}
-              className=" rounded-xl p-3 hover:bg-neutral-300 placeholder-duration-700 focus:outline-none focus:border-transparent focus:bg-neutral-300 focus:placeholder-font-bold focus:placeholder-white "
+              className=" rounded-xl bg-white p-3 hover:bg-neutral-300 placeholder-duration-700 focus:outline-none focus:border-transparent focus:bg-neutral-300 focus:placeholder-font-bold focus:placeholder-white "
               type="text"
               placeholder="Full Name"
             />
@@ -51,7 +51,7 @@ function HomeSection6() {
               onChange={(e) => handleChange(e)}
               name="email"
               value={userData.email}
-              className=" rounded-xl p-3 hover:bg-neutral-300 focus:outline-none focus:border-transparent focus:bg-neutral-300 focus:placeholder-font-bold focus:placeholder-white "
+              className=" rounded-xl bg-white p-3 hover:bg-neutral-300 focus:outline-none focus:border-transparent focus:bg-neutral-300 focus:placeholder-font-bold focus:placeholder-white "
               type="email"
               placeholder="Email"
             />
@@ -59,7 +59,7 @@ function HomeSection6() {
               onChange={(e) => handleChange(e)}
               name="subject"
               value={userData.subject}
-              className=" rounded-xl p-3 hover:bg-neutral-300 focus:outline-none focus:border-transparent focus:bg-neutral-300 focus:placeholder-font-bold focus:placeholder-white "
+              className=" rounded-xl p-3 bg-white hover:bg-neutral-300 focus:outline-none focus:border-transparent focus:bg-neutral-300 focus:placeholder-font-bold focus:placeholder-white "
               type="text"
               placeholder="Subject"
             />
@@ -67,7 +67,7 @@ function HomeSection6() {
               onChange={(e) => handleChange(e)}
               name="message"
               value={userData.message}
-              className=" h-[20vh] resize-none rounded-xl p-3 hover:bg-neutral-300 focus:outline-none focus:border-transparent focus:bg-neutral-300 focus:placeholder-font-bold focus:placeholder-white"
+              className=" h-[20vh] bg-white resize-none rounded-xl p-3 hover:bg-neutral-300 focus:outline-none focus:border-transparent focus:bg-neutral-300 focus:placeholder-font-bold focus:placeholder-white"
               placeholder="Message"
             ></textarea>
             <button className="bg-[#0B2F9F]  duration-500 text-white py-2 w-fit px-4 md:w-[6vw] rounded-lg">

@@ -53,7 +53,7 @@ function Header() {
           isOpen ? "fixed top-0 left-0  bg-neutral-600 w-screen" : "sticky top-0 px-[20px]"
         } z-10 transition-all duration-300  md:px-[70px] -mx-[20px] md:-mx-[70px] `}
       >
-        <a href="#" className={` font-bold text-xl flex ${isDarkMode?"text-white":""}`}>
+        <a href="#" className={` font-bold text-xl flex ${isDarkMode?"text-white":"text-neutral-600"}`}>
           Nihat Abdullah
         </a>
         <nav className="hidden md:flex space-x-6">
@@ -82,7 +82,7 @@ function Header() {
             </div>
           ) : (
             <RxHamburgerMenu
-              className={`text-3xl cursor-pointer transition-all duration-300 ${isDarkMode?"text-white":"text-black"}`}
+              className={`text-3xl cursor-pointer transition-all duration-300 ${isDarkMode?"text-white":"text-neutral-600"}`}
               onClick={handleOpen}
             />
           )}

@@ -9,7 +9,7 @@ function HomeSection1() {
     <>
       <section
         id="home"
-        className="flex md:flex-row flex-col-reverse justify-between items-center min-h-[80vh] md:min-h-[90vh]"
+        className="flex md:flex-row flex-col-reverse justify-between items-center min-h-[60vh] md:min-h-[90vh]"
       >
         <div className="flex flex-col gap-7">
           <div className="flex flex-col md:items-start items-center gap-2">
