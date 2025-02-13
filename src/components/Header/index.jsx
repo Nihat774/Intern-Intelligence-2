@@ -82,7 +82,7 @@ function Header() {
             </div>
           ) : (
             <RxHamburgerMenu
-              className={`text-3xl cursor-pointer transition-all duration-300 `}
+              className={`text-3xl cursor-pointer transition-all duration-300 ${isDarkMode?"text-white":"text-black"}`}
               onClick={handleOpen}
             />
           )}
