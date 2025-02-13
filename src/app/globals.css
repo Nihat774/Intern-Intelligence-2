@@ -16,7 +16,7 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #eee;
   font-family: var(--font-roboto), sans-serif;
 }
 .dark body {
